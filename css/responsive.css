@@ -217,7 +217,8 @@ Mobile styling for all devices up to 767px
   }
 
   .single-well img {
-    height: 250px;
+    height: 300px;
+    border-radius: 60px 0px 60px 0px;
   }
 
   .services-icon{

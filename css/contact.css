@@ -1,0 +1,615 @@
+
+/*----------------------------------------
+ 0.  CSS COLORS
+----------------------------------------*/
+
+:root {
+    --primary-color: #577cd1;
+    --secondary-color: white;
+    --third-color: #c39595;  
+  }
+  
+  
+  /*----------------------------------------
+    1.  MAIN CSS
+  ----------------------------------------*/
+  
+  html, body {
+    height: 100%;
+  }
+  
+  a:focus {
+    outline: 0px solid;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .fix {
+    overflow: hidden;
+  }
+  
+  p {
+    margin: 0 0 15px;
+    color: #444;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+    margin: 0 0 15px;
+    color: #444;
+    font-weight: 500;
+  }
+  
+  h1 {
+    font-size: 48px;
+    line-height: 50px;
+  }
+  
+  h2 {
+    font-size: 38px;
+    line-height: 40px;
+  }
+  
+  h3 {
+    font-size: 30px;
+    line-height: 32px;
+  }
+  
+  h4 {
+    font-size: 24px;
+    line-height: 26px;
+  }
+  
+  h5 {
+    font-size: 20px;
+    line-height: 22px;
+  }
+  
+  h6 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  
+  a {
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #3EC1D5;
+    text-decoration: none;
+  }
+  
+  a:active, a:hover {
+    outline: 0 none;
+  }
+  
+  .tonyred h2 span {
+  color: #c82b2b;
+  font-weight: 900;
+  }
+  
+  body {
+    background: #fff none repeat scroll 0 0;
+    color: #444;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    text-align: left;
+    overflow-x: hidden;
+    line-height: 22px;
+  }
+  
+  /* Back to top button */
+  .back-to-top {
+    position: fixed;
+    display: none;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 6px 12px 9px 12px;
+    font-size: 16px;
+    border-radius: 2px;
+    right: 15px;
+    bottom: 15px;
+    transition: background 0.5s;
+  }
+  
+  @media (max-width: 768px) {
+    .back-to-top {
+      bottom: 15px;
+    }
+  }
+  
+  .back-to-top:focus {
+    background: white;
+    color: var(--primary-color);
+    border-width: medium;
+    border-color: var(--primary-color);
+    outline: none;
+  }
+  
+  .back-to-top:hover {
+    background: white;
+    color: var(--primary-color);
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--primary-color);
+    outline: none;
+  }
+  
+  .clear {
+    clear: both;
+  }
+  
+  ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  input, select, textarea, input[type="text"], input[type="date"], input[type="url"], input[type="email"], input[type="password"], input[type="tel"], button, button[type="submit"] {
+    appearance: none;
+    box-shadow: none !important;
+  }
+  
+  /* selection of text and items */
+  ::selection {
+    background: var(--third-color);
+    text-shadow: none;
+  }
+  
+  .area-padding {
+    padding: 70px 0px 80px;
+  }
+  
+  .area-padding-2 {
+    padding: 70px 0px 50px;
+  }
+  
+  .padding-2 {
+    padding-bottom: 90px;
+  }
+  
+  .section-headline h2 {
+    display: inline-block;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 70px;
+    position: relative;
+    text-transform: capitalize;
+  }
+  
+  .section-headline h2::after {
+    border: 1px solid #333;
+    bottom: -20px;
+    content: "";
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    width: 40%;
+  }
+  
+  .sec-head {
+    display: inline-block;
+    font-size: 3vh;
+    font-weight: 600;
+    margin-bottom: 0;
+    padding: 0 0 10px;
+    text-transform: uppercase;
+    transition: all 0.4s ease 0s;
+  }
+  
+  /*--------------------------------
+   2. HEADER
+  --------------------------------*/
+  
+  /* Menu in the initial layout is transparent */
+  .header-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background: none;
+    z-index: 9;
+  }
+  
+  .navbar-header a.navbar-brand {
+    display: inline-block;
+    height: 70px;
+    padding: 15px 0;
+  }
+  
+  .main-menu ul.navbar-nav li {
+    display: inline-block;
+    padding: 0px 13px;
+  }
+  
+  .main-menu ul.navbar-nav li a {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 24px 0px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+  }
+  
+  .main-menu ul.navbar-nav li.active > a::after {
+    border: 1px solid #fff;
+    bottom: 0px;
+    content: "";
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .main-menu ul.navbar-nav li.active a:hover {
+    background: none;
+    color: #fff;
+  }
+  
+  .main-menu ul.navbar-nav li.active a:focus {
+    color: #fff;
+  }
+  
+  .main-menu ul.navbar-nav li.active a {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    color: #fff;
+    position: relative;
+  }
+  
+  .main-menu ul.navbar-nav li a:hover {
+    color: var(--primary-color);
+    font-weight: bolder; 
+  }
+  
+  .navbar {
+    border: medium none;
+    margin-bottom: 0;
+  }
+  
+  .navbar-default {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  }
+  
+  .main-menu ul.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+    background: none;
+    color: #333;
+  }
+  
+  .navbar-default .navbar-toggle {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 0;
+    padding: 25px 0px;
+  }
+  
+  .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+    background-color: transparent;
+    color: #fff;
+  }
+  
+  .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background: none;
+  }
+  
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+    width: 30px;
+    height: 2px;
+  }
+  
+  .top-right.text-right {
+    float: right;
+    position: relative;
+    top: 24px;
+    margin-left: 20px;
+  }
+  
+  .top-right.text-right>li {
+    float: right;
+    margin: 0px 8px;
+  }
+  
+  .top-right.text-right li a {
+    color: #fff;
+  }
+  
+  .main-menu .dropdown ul {
+    background: #000;
+  }
+  
+  .main-menu .dropdown ul li {
+    display: block;
+  }
+  
+  /*--------------------------------
+  2.1.  NAVIGATION BAR
+  --------------------------------*/
+  
+  .header-area {
+    background-color: var(--primary-color);
+    height: 70px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .scrolled {
+    background-color: var(--primary-color); /* Use your theme's color */
+  }
+  
+  .navbar-header a.navbar-brand {
+    display: inline-block;
+    height: 90px;
+  }
+  
+   .navbar-brand>img {
+    display: none;
+  }
+  
+   .navbar-brand.logo>img {
+    display: block;
+  }
+  
+  .logo h1 {
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    font-size: 36px;  
+    font-weight: bold;
+    line-height: 1;
+  }
+  
+  .logo h1 span {
+    color: #c82b2b;
+  }
+  .main-menu ul.navbar-nav li.active > a::after {
+    border: 1px solid #fff;
+    bottom: 0px;
+    content: "";
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .main-menu ul.nav>li>a:hover {
+    color: #fff;
+  }
+  
+  .main-menu ul.navbar-nav li.active a {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    color: #fff;
+    position: relative;
+  }
+  
+  
+  /*--------------------------------
+  14. CONTACTOS
+  /*--------------------------------*/
+  
+  /* Main Contact Area */
+  .contact-area {
+    width: 100%;
+    background-color: #f3f4f6; /* Light gray background */
+    padding: 80px 0; /* Padding for the entire area */
+  }
+  
+  /* Inner Content Styling */
+  .contact-inner {
+    max-width: 1200px; /* Limit the max width of the container */
+    margin: 0 auto; /* Center the container */
+  }
+  
+  /* Section Headline */
+  .section-headline h2 {
+    font-size: 36px; /* Heading size */
+    color: #333; /* Dark text color */
+    margin-bottom: 40px; /* Space below heading */
+    text-align: center; /* Center text */
+  }
+  
+  /* Contact Icon Section */
+  .contact-icon {
+    text-align: center; /* Center the icons */
+    margin-bottom: 30px; /* Space below each icon */
+  }
+  
+  .contact-icon .single-icon {
+    display: flex; /* Flexbox for alignment */
+    flex-direction: column; /* Stack icon above text */
+    align-items: center; /* Center align items */
+  }
+  
+  /* Icon Style */
+  .single-icon i {
+    font-size: 36px; /* Larger icon size */
+    width: 50px;
+    height: 50px;
+    line-height: 46px;
+    border-radius: 50%; /* Circular icons */
+    margin-bottom: 10px; /* Space below icon */
+  }
+  
+  /* Icon Text */
+  .single-icon p {
+    font-size: 16px; /* Standard text size */
+    line-height: 30px; /* Line height for text */
+    color: #444; /* Dark text color */
+  }
+  
+  /* Contact Content Box */
+  .contact-content {
+    padding: 40px; /* Padding inside content box */
+    background-color: #ffffff; /* White background */
+    border-radius: 12px; /* Rounded corners */
+    margin-top: 20px; /* Space above content box */
+    text-align: center; /* Center text in content box */
+    height: 300px;
+  }
+  
+  /* Contact Heading */
+  .contact-content h4 {
+    font-size: 28px; /* Size for the contact heading */
+    color: #333; /* Dark text color */
+    margin-bottom: 20px; /* Space below heading */
+    font-weight: 700; /* Bold text */
+  }
+  
+  /* Contact Paragraph */
+  .contact-content p {
+    font-size: 18px; /* Size for paragraph text */
+    color: #666; /* Lighter text color */
+    line-height: 1.6; /* Line height for better readability */
+    margin-bottom: 30px; /* Space below paragraph */
+  }
+  
+  /* Mail Button Styling */
+  .mail-btn {
+    background-color: var(--primary-color); /* Primary color background */
+    color: #ffffff; /* White text color */
+    font-size: 18px; /* Font size */
+    padding: 12px 30px; /* Padding for button */
+    border-radius: 30px; /* Rounded corners */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline-block for spacing */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transition effects */
+  }
+  
+  /* Mail Button Hover Effect */
+  .mail-btn:hover {
+    background-color: white;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+  }
+  
+  /* Map/Image Section */
+  .contact-image img {
+    width: 100%; /* Responsive image */
+    border-radius: 12px; /* Rounded corners for image */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    height: 300px; /* Maintain aspect ratio */
+    margin-top: 20px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact-content {
+      margin-top: 20px; /* Space on smaller screens */
+    }
+  
+    .contact-image img {
+      margin-bottom: 30px; /* Space below image on mobile */
+    }
+  }
+  
+  /*----------------------------------------
+  15. FOOTER
+  ----------------------------------------*/
+  
+  .footer-area {
+    padding: 40px 0;
+    background: #f9f9f9;
+  }
+  
+  .footer-head p {
+    color: #444;
+  }
+  
+  .footer-head h4 {
+    color: #444;
+    font-size: 16px;
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  .footer-head a{
+    color: #444;
+    display: block;
+    padding-bottom: 15px;
+  }
+  
+  .footer-head a:hover{
+    color: var(--primary-color);
+  }
+  
+  .footer-logo {
+    padding-bottom: 20px;
+  }
+  
+  .footer-logo h2 {
+    color: #222;
+    padding: 0;
+    margin: 0;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1;
+    font-weight: 900;
+  }
+  
+  .footer-logo h2 span {
+    color: rgb(200, 43, 43);
+    font-weight: 900;
+  }
+  
+  .footer-icons ul li {
+    display: inline-block;
+  }
+  
+  .footer-icons ul li a {
+    border: 1px solid #444;
+    color: #444;
+    display: block;
+    font-size: 16px;
+    height: 40px;
+    line-height: 38px;
+    margin-right: 5px;
+    text-align: center;
+    width: 40px;
+    border-radius: 50%;
+  }
+  
+  .footer-icons {
+    margin-top: 30px;
+  }
+  
+  .footer-contacts p span {
+    color: var(--primary-color);
+    font-weight: 700;
+  }
+  
+  .footer-content {
+    display: block;
+    overflow: hidden;
+  }
+  
+  .footer-icons ul li a:hover {
+    background: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    color: #fff;
+  }
+  
+  .footer-area-bottom {
+    background: #f1f1f1 none repeat scroll 0 0;
+    padding: 15px 0;
+  }
+  
+  .copyright-text a {
+    color: #444;
+  }
+  
+  .copyright>p {
+    margin-bottom: 0;
+    color: #444;
+  }
+  
+  /*----------------------------------------
+   .End CSS
+  ----------------------------------------*/
+  

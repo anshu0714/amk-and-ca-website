@@ -25,6 +25,17 @@
     $(this).addClass("active");
   });
 
+  window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.header-area');
+    const heroSectionHeight = document.querySelector('.nivoSlider').offsetHeight;
+    
+    if (window.scrollY > heroSectionHeight) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+
   /*----------------------------
    wow js active
   ------------------------------ */
