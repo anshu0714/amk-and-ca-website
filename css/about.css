@@ -421,25 +421,30 @@ button[type="submit"] {
 
 /*--------------------------------
   2.1.  About Us
-  --------------------------------*/
+--------------------------------*/
 .section-title {
-  margin-top: 100px;
+  margin-top: 80px; /* Reduced top margin for better alignment */
   font-family: "Poppins", sans-serif;
-  font-size: 4rem;
+  font-size: 3.5rem; /* Slightly smaller for better fit */
   font-weight: 600;
-  margin-bottom: 30px;
+  margin-bottom: 20px; /* Reduced bottom margin */
   color: #333;
+  text-align: center; /* Centering the title */
 }
 
 .about-section p {
-  font-size: 1.6rem;
+  font-size: 1.4rem; /* Slightly smaller text */
   line-height: 1.7;
   color: #555;
+  text-align: center; /* Centered paragraph text */
+  max-width: 800px; /* Limiting width for readability */
+  margin: 0 auto; /* Centering block */
 }
 
 .vision-mission-section .nav-tabs .nav-link {
   color: #007bff;
   font-weight: 500;
+  transition: background-color 0.3s; /* Smooth transition for active state */
 }
 
 .vision-mission-section .nav-tabs .nav-link.active {
@@ -450,23 +455,26 @@ button[type="submit"] {
 .tab-content p {
   font-size: 1.2rem;
   color: #555;
+  margin-bottom: 20px; /* Space below paragraphs */
 }
 
 .core-values-section {
-  background-color: #f8f9fa;
+  background-color: #f8f9fa; /* Light background for contrast */
+  padding: 40px 0; /* Padding for section */
 }
 
 .core-value-box {
   background: #fff;
   padding: 30px;
-  border-radius: 8px;
+  border-radius: 12px; /* Increased corner radius */
   text-align: center;
   margin-bottom: 30px;
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Added transform for hover */
 }
 
 .core-value-box:hover {
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+  transform: translateY(-5px); /* Lift effect on hover */
 }
 
 .core-value-box i {
@@ -476,7 +484,7 @@ button[type="submit"] {
 }
 
 .core-value-box h4 {
-  font-size: 1.5rem;
+  font-size: 1.6rem; /* Increased size for better visibility */
   margin-bottom: 15px;
   font-weight: 600;
 }
@@ -486,17 +494,17 @@ button[type="submit"] {
   line-height: 1.7;
   color: #555;
   padding-left: 0;
+  list-style: none; /* Removing default list style */
 }
 
 .services-list li {
   margin-bottom: 15px;
-  list-style: none;
-  padding-left: 20px;
   position: relative;
+  padding-left: 30px; /* Adjusted for icon alignment */
 }
 
 .services-list li:before {
-  content: "\f00c";
+  content: "\f00c"; /* Font Awesome check mark */
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   position: absolute;
@@ -507,31 +515,34 @@ button[type="submit"] {
 
 /* Responsive Styling */
 @media (max-width: 768px) {
-  .header-title {
-    font-size: 1.8rem;
+  .section-title {
+    font-size: 2.5rem; /* Smaller title on mobile */
   }
 
   .core-value-box i {
-    font-size: 2rem;
+    font-size: 2rem; /* Adjust icon size */
+  }
+
+  .about-section p {
+    font-size: 1.2rem; /* Adjust paragraph text size */
   }
 }
 
 @media (max-width: 576px) {
-  .header-title {
-    font-size: 1.5rem;
-  }
-
-  .main-nav a {
-    font-size: 0.9rem;
-    margin-right: 10px;
+  .section-title {
+    font-size: 2rem; /* Further reduce title size */
   }
 
   .core-value-box {
-    padding: 20px;
+    padding: 20px; /* Reduce padding on smaller screens */
   }
 
   .core-value-box i {
-    font-size: 1.8rem;
+    font-size: 1.8rem; /* Adjust icon size */
+  }
+
+  .about-section p {
+    font-size: 1rem; /* Adjust paragraph text size */
   }
 }
 
@@ -751,150 +762,100 @@ button[type="submit"] {
   text-align: left;
 }
 
-/*--------------------------------
-  2.1.  Our Team
-  --------------------------------*/
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .value-item {
+    flex: 1 1 100%;
+    /* Full width for smaller screens */
+    margin: 10px 0;
+  }
 
-.team-member {
-  background: rgba(0, 0, 0, 0.65) none repeat scroll 0 0;
-  display: block;
-  margin-right: -15px;
-  padding: 10px;
-  position: relative;
-  overflow: hidden;
-}
-
-.team-member::before {
-  background: rgba(0, 0, 0, 0) url("../img/team/team01.jpg") repeat scroll 0 0;
-  content: "";
-  display: block;
-  height: 100%;
-  left: 0;
-  margin-right: -15px;
-  padding: 10px;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: -1;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
-  transition: 5s;
-  transform: scale(1);
-}
-
-.team-member:hover.team-member::before {
-  transform: scale(1.2);
-}
-
-.single-team-member {
-  border: 1px solid #ddd;
-  min-height: 400px;
-}
-
-.team-member-carousel .single-team-member {
-  overflow: hidden;
-  width: 100%;
-}
-
-.single-team-member:hover .team-img a:after {
-  opacity: 1;
-}
-
-.single-team-member:hover .team-social-icon {
-  top: 45%;
-  opacity: 1;
-}
-
-.team-img {
-  position: relative;
-}
-
-.team-img > a {
-  display: block;
-}
-
-.team-img img {
-  width: 100%;
-  height: 250px;
-}
-
-.team-img > a::after {
-  background: rgba(0, 0, 0, 0.7);
-  bottom: 0;
-  content: "";
-  height: 100%;
-  left: 0;
-  position: absolute;
-  transition: all 0.5s ease 0s;
-  width: 100%;
-  opacity: 0;
-}
-
-.team-social-icon {
-  left: 65%;
-  margin-left: -61px;
-  opacity: 0;
-  position: absolute;
-  top: 30%;
-  transition: 1.3s;
-}
-
-.team-social-icon ul li {
-  display: inline-block;
-}
-
-.team-social-icon ul li a {
-  border: 1px solid #fff;
-  border-radius: 50%;
-  color: #fff;
-  display: block;
-  font-size: 14px;
-  height: 34px;
-  line-height: 35px;
-  margin: 0 3px;
-  width: 34px;
-}
-
-.team-social-icon ul li a:hover {
-  color: #fff;
-  border: 1px solid var(--primary-color);
-  background: var(--primary-color);
-}
-
-.team-top {
-  margin-top: 40px;
-}
-
-.team-content {
-  padding: 10px 10px;
-}
-
-.team-content > h4,
-.team-content > p {
-  color: #444;
-  margin-bottom: 5px;
-}
-
-.team-content.head-team p {
-  margin-bottom: 0;
-}
-
-.team-left-icon.text-center {
-  margin-bottom: 20px;
-}
-
-.head-team h4 {
-  display: inline-block;
-  font-size: 25px;
-  font-weight: 600;
-  padding-bottom: 10px;
-  text-transform: uppercase;
+  .mission-content p {
+    width: 100%;
+    /* Adjust paragraph width on small screens */
+  }
 }
 
 /*--------------------------------
   14. Disclaimer
 /*--------------------------------*/
+.disclaimer-section {
+  background-color: #f8f9fa; /* Light background for contrast */
+  padding: 40px; /* Generous padding for a spacious feel */
+  border-radius: 12px; /* Rounded corners for a modern look */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  max-width: 1200px; /* Limit width for readability */
+  margin: 40px auto; /* Centered with margin */
+}
+
+.disclaimer-header {
+  text-align: center; /* Centering header content */
+  margin-bottom: 30px; /* Space below header */
+}
+
+.disclaimer-header h2 {
+  font-family: "Poppins", sans-serif; /* Modern font */
+  font-size: 42px; /* Large font size */
+  color: #333; /* Dark color for text */
+  margin: 0; /* Remove default margin */
+}
+
+.disclaimer-header p {
+  font-size: 14px; /* Slightly smaller font for location */
+  color: #555; /* Gray color for contrast */
+  margin: 5px 0; /* Space around text */
+}
+
+h3 {
+  font-family: "Poppins", sans-serif; /* Consistent font */
+  font-size: 32px; /* Large size for the heading */
+  color: var(--primary-color); /* Primary color for emphasis */
+  text-align: center; /* Centering heading */
+  margin: 20px 0; /* Space around heading */
+}
+
+.disclaimer-content {
+  font-size: 16px; /* Readable font size */
+  color: #555; /* Gray text for legibility */
+  line-height: 1.6; /* Spacing between lines */
+  margin-top: 20px; /* Space above content */
+}
+
+.disclaimer-content p {
+  margin-bottom: 15px; /* Space between paragraphs */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .disclaimer-section {
+    padding: 20px; /* Reduced padding for smaller screens */
+    margin: 0px;
+  }
+  
+  .disclaimer-header{
+    margin: 0px;
+  }
+
+  .disclaimer-section h3{
+    font-size: 24px;
+  }
+
+  .disclaimer-header h2 {
+    font-size: 2rem; /* Smaller title on mobile */
+  }
+
+  h3 {
+    font-size: 1.8rem; /* Smaller heading on mobile */
+  }
+
+  .disclaimer-content {
+    font-size: 1rem; /* Smaller font for content */
+  }
+
+  .disclaimer-content p{
+    font-size: 12px;
+  }
+}
 
 /*--------------------------------
   14. CONTACTOS
@@ -957,12 +918,11 @@ button[type="submit"] {
 }
 
 .breadcrumb a:hover {
-  color: #f0f0f0;
+  text-decoration: underline;
 }
 
 .breadcrumb .active {
   font-weight: bold;
-  text-decoration: underline;
 }
 
 .container {
@@ -1073,9 +1033,36 @@ button[type="submit"] {
 }
 
 @media (max-width: 480px) {
-  .about-heading {
-    font-size: 1.5rem;
+  .container{
+    margin: 10px;
   }
+  .about-content h1{
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .about-content h4{
+    font-size: 20px;
+  }
+  .about-row{
+    margin: 10px;
+  }
+  .about-hero{
+    margin-top: 60px;
+  }
+  .about-heading {
+    font-size: 28px;
+  }
+  #about{
+    padding: 20px;
+  }
+  #about h2, #services h2, #mission h2{
+    margin-bottom: 20px;
+  }
+  #about p, #services p, #mission p{
+    width: 100%;
+    font-size: 14px;
+  }
+ 
 }
 
 /*--------------------------------
@@ -1156,147 +1143,19 @@ button[type="submit"] {
   .service-content {
     flex: 1 0 100%;
     /* 1 item per row on small devices */
+    margin: auto;
   }
-}
-
-/*--------------------------------
-  14. CONTACTOS
-  /*--------------------------------*/
-
-/* Main Contact Area */
-.contact-area {
-  width: 100%;
-  background-color: #f3f4f6;
-  padding: 80px 0;
-}
-
-/* Inner Content Styling */
-.contact-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Section Headline */
-.section-headline h2 {
-  font-size: 36px;
-  color: #333;
-  margin-bottom: 40px;
-  text-align: center;
-}
-
-/* Contact Icon Section */
-.contact-icon {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.contact-icon .single-icon {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Icon Style */
-.single-icon i {
-  font-size: 36px;
-  width: 50px;
-  height: 50px;
-  line-height: 46px;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
-
-/* Icon Text */
-.single-icon p {
-  font-size: 16px;
-  line-height: 30px;
-  color: #444;
-}
-
-/* Contact Content Box */
-.contact-content {
-  padding: 40px;
-  background-color: #ffffff;
-  border-radius: 12px;
-  margin-top: 20px;
-  text-align: center;
-  height: 300px;
-}
-
-/* Contact Heading */
-.contact-content h4 {
-  font-size: 28px;
-  /* Size for the contact heading */
-  color: #333;
-  /* Dark text color */
-  margin-bottom: 20px;
-  /* Space below heading */
-  font-weight: 700;
-  /* Bold text */
-}
-
-/* Contact Paragraph */
-.contact-content p {
-  font-size: 18px;
-  /* Size for paragraph text */
-  color: #666;
-  /* Lighter text color */
-  line-height: 1.6;
-  /* Line height for better readability */
-  margin-bottom: 30px;
-  /* Space below paragraph */
-}
-
-/* Mail Button Styling */
-.mail-btn {
-  background-color: var(--primary-color);
-  /* Primary color background */
-  color: #ffffff;
-  /* White text color */
-  font-size: 18px;
-  /* Font size */
-  padding: 12px 30px;
-  /* Padding for button */
-  border-radius: 30px;
-  /* Rounded corners */
-  text-decoration: none;
-  /* No underline */
-  display: inline-block;
-  /* Inline-block for spacing */
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  /* Transition effects */
-}
-
-/* Mail Button Hover Effect */
-.mail-btn:hover {
-  background-color: white;
-  color: var(--primary-color);
-  border: 2px solid var(--primary-color);
-}
-
-/* Map/Image Section */
-.contact-image img {
-  width: 100%;
-  /* Responsive image */
-  border-radius: 12px;
-  /* Rounded corners for image */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  /* Shadow effect */
-  height: 300px;
-  /* Maintain aspect ratio */
-  margin-top: 20px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .contact-content {
-    margin-top: 20px;
-    /* Space on smaller screens */
+  .services-grid{
+    gap: 20px;
   }
-
-  .contact-image img {
-    margin-bottom: 30px;
-    /* Space below image on mobile */
+  .section-headline{
+    margin-bottom: 10px;
+  }
+  .mission-content{
+    padding: 10px;
+  }
+  .mission-content p{
+    font-size: 14px;
   }
 }
 
