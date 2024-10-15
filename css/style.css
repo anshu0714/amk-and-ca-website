@@ -442,7 +442,6 @@ input, select, textarea, input[type="text"], input[type="date"], input[type="url
   padding: 30px;
   position: relative;
   overflow: hidden;
-  background-size: cover;
   transition: all 0.5s ease;
   flex: 1 1 calc(33.333% - 20px);
   margin: 10px;
