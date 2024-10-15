@@ -828,7 +828,7 @@ h3 {
 /* Responsive Styling */
 @media (max-width: 768px) {
   .disclaimer-section {
-    padding: 20px; 
+    padding: 20px; /* Reduced padding for smaller screens */
     margin: 20px;
   }
   
