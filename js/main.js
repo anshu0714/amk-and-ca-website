@@ -1,7 +1,6 @@
 (function ($) {
   "use strict";
 
-
   /*---------------------
    TOP Menu Stick
   --------------------- */
@@ -17,12 +16,32 @@
   });
 
   /*----------------------------
-   Navbar nav
+   Navbar nav active link behavior
   ------------------------------ */
-  var main_menu = $(".main-menu ul.navbar-nav li ");
+  var main_menu = $(".main-menu ul.navbar-nav li");
   main_menu.on('click', function () {
     main_menu.removeClass("active");
     $(this).addClass("active");
+  });
+
+  /*----------------------------
+   Dropdown click handling for Services page
+  ------------------------------ */
+  $('.dropdown-toggle').on('click', function (e) {
+    var $el = $(this).parent(); 
+    var isActive = $el.hasClass('open');
+    if (isActive) {
+      // If the dropdown is already open, prevent default link behavior
+      e.preventDefault();
+    }
+    $el.toggleClass('open');
+  });
+
+  // Close dropdown on clicking outside
+  $(document).on('click', function (e) {
+    if (!$(e.target).closest('.dropdown').length) {
+      $('.dropdown').removeClass('open');
+    }
   });
 
   window.addEventListener('scroll', function() {
@@ -37,17 +56,32 @@
   });
 
   /*----------------------------
-   wow js active
+   Smooth Scroll to Sections
   ------------------------------ */
-  new WOW().init();
+  var page_scroll = $('a.page-scroll');
+  page_scroll.on('click', function (event) {
+    var $anchor = $(this);
+    var target = $($anchor.attr('href'));
 
+    if (target.length) {
+      $('html, body').stop().animate({
+        scrollTop: target.offset().top - 55 // Adjusts for fixed header height
+      }, 1500, 'easeInOutExpo');
+    }
+    
+    event.preventDefault();
+  });
+
+  /*----------------------------
+   Navbar collapse behavior on mobile
+  ------------------------------ */
   $(".navbar-collapse a:not(.dropdown-toggle)").on('click', function () {
     $(".navbar-collapse.collapse").removeClass('in');
   });
 
-  /*---------------------------------------------
-  Nivo slider
-  ---------------------------------------------*/
+  /*----------------------------
+   Nivo Slider Initialization (if used)
+  ------------------------------ */
   $('#ensign-nivoslider').nivoSlider({
     effect: 'random',
     slices: 15,
@@ -63,35 +97,16 @@
   });
 
   /*----------------------------
-   Scrollspy js
+   Scrollspy for section highlighting in navbar
   ------------------------------ */
-  var Body = $('body');
-  Body.scrollspy({
+  $('body').scrollspy({
     target: '.navbar-collapse',
     offset: 80
   });
 
-  /*---------------------
-  Venobox
-  --------------------- */
-  var veno_box = $('.venobox');
-  veno_box.venobox();
-
   /*----------------------------
-  Page Scroll
+   Back to top button
   ------------------------------ */
-  var page_scroll = $('a.page-scroll');
-  page_scroll.on('click', function (event) {
-    var $anchor = $(this);
-    $('html, body').stop().animate({
-      scrollTop: $($anchor.attr('href')).offset().top - 55
-    }, 1500, 'easeInOutExpo');
-    event.preventDefault();
-  });
-
-  /*--------------------------
-  Back to top button
-  ---------------------------- */
   $(window).scroll(function () {
     if ($(this).scrollTop() > 100) {
       $('.back-to-top').fadeIn('slow');
@@ -106,25 +121,8 @@
   });
 
   /*----------------------------
-  Parallax
+   Testimonial Carousel (if used)
   ------------------------------ */
-  var well_lax = $('.wellcome-area');
-  well_lax.parallax("50%", 0.4);
-  var well_text = $('.wellcome-text');
-  well_text.parallax("50%", 0.6);
-
-  /*--------------------------
-  Collapse
-  ---------------------------- */
-  var panel_test = $('.panel-heading a');
-  panel_test.on('click', function () {
-    panel_test.removeClass('active');
-    $(this).addClass('active');
-  });
-
-  /*---------------------
-  Testimonial carousel
-  ---------------------*/
   var test_carousel = $('.testimonial-carousel');
   test_carousel.owlCarousel({
     loop: true,
@@ -143,10 +141,10 @@
       }
     }
   });
+
   /*----------------------------
-  Isotope active
+   Isotope for Portfolio (if used)
   ------------------------------ */
-  // portfolio start
   $(window).on("load", function () {
     var $container = $('.awesome-project-content');
     $container.isotope({
@@ -159,9 +157,6 @@
     });
     var pro_menu = $('.project-menu li a');
     pro_menu.on("click", function () {
-      var pro_menu_active = $('.project-menu li a.active');
-      pro_menu_active.removeClass('active');
-      $(this).addClass('active');
       var selector = $(this).attr('data-filter');
       $container.isotope({
         filter: selector,
@@ -171,11 +166,10 @@
           queue: false
         }
       });
+      pro_menu.removeClass('active');
+      $(this).addClass('active');
       return false;
     });
-
   });
-  //portfolio end
 
 })(jQuery);
-
