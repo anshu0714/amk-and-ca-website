@@ -93,7 +93,7 @@
                     <a class="page-scroll" href="./services.html" class="dropdown-toggle" data-toggle="dropdown">Services<span
                       class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
-                     <li><a href="services.html#client">Client</a></li>
+                    <li><a href="services.html#client">Client</a></li>
                     <li><a href="services.html#audit">Audit</a></li>
                     <li><a href="services.html#consulting">Consulting</a></li>
                     <li><a href="services.html#tax">Tax</a></li>
@@ -194,7 +194,7 @@
         <div class="col-md-6 col-sm-6 col-xs-12">
           <div class="well-left">
             <div class="single-well">
-              <img src="img/about/4.jpg" alt="" />
+              <img src="img/about/4.jpg" id="frontimage"/>
             </div>
           </div>
         </div>
@@ -214,15 +214,16 @@
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist">
                   <li class="active">
-                    <a href="#p-view-1" role="tab" data-toggle="tab"> Vision </a>
+                    <a onclick="changeImage('img/about/mission.jpg')" href="#p-view-1" role="tab" data-toggle="tab">Vision</a>
                   </li>
                   <li>
-                    <a href="#p-view-2" role="tab" data-toggle="tab"> Mission </a>
+                    <a onclick="changeImage('img/about/vision.jpg')" href="#p-view-2" role="tab" data-toggle="tab">Mission</a>
                   </li>
                   <li>
-                    <a href="#p-view-3" role="tab" data-toggle="tab"> AMK Brand </a>
+                    <a onclick="changeImage('img/about/expert.jpg')" href="#p-view-3" role="tab" data-toggle="tab">AMK Brand</a>
                   </li>
                 </ul>
+                
               </div>
               <div class="tab-content">
                 <div class="tab-pane active" id="p-view-1">
@@ -544,7 +545,12 @@
   <!--!----------------------------------------------------------------------------------------------------------------- -->
   <!--!                                                 JAVASCRIPT LIBRARIES                                             -->
   <!--!----------------------------------------------------------------------------------------------------------------- -->
-
+  <script>
+    function changeImage(filename){
+        let img = document.querySelector("#frontimage");
+        img.setAttribute("src",filename);
+    }
+   </script>
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/bootstrap/js/bootstrap.min.js"></script>
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
