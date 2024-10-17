@@ -101,6 +101,153 @@ body {
   line-height: 22px;
 }
 
+.mission-area {
+  padding: 60px 0;
+  /* Padding for top and bottom */
+  background-color: #fff;
+  /* White background for contrast */
+}
+
+#mc1{
+  background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+  /* background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%); */
+}
+
+#mc2{
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+#mc3{
+  background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
+  /* background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%); */
+}
+
+#mc4{
+  background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+  /* background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%); */
+}
+
+#mc5{
+  background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+  /* background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%); */
+}
+
+#mc6{
+  background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);  
+  /* background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%); */
+}
+
+.mission-content {
+  /* background: linear-gradient(
+    to right,
+    rgba(0, 123, 255, 0.5),
+    rgba(173, 216, 230, 0.7)
+  ); */
+  /* background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%); */
+  /* Primary color to a light blue gradient */
+  padding: 40px;
+  /* Increased padding inside the content area */
+  border-radius: 10px;
+  /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  /* Enhanced shadow for depth */
+  margin-top: 30px;
+  /* Margin at the top */
+  transition: all 0.3s ease;
+  /* Transition for hover effect */
+}
+
+.mission-content h4 {
+  font-size: 26px;
+  /* Font size for section headings */
+  margin-top: 20px;
+  /* Margin above the headings */
+  margin-bottom: 15px;
+  /* Margin below the headings */
+  color: var(--primary-color);
+  /* Heading color */
+  font-weight: bold;
+  /* Bold text for emphasis */
+}
+
+.mission-content p {
+  font-size: 16px;
+  /* Font size for paragraphs */
+  color: #333;
+  /* Text color */
+  line-height: 1.8;
+  /* Increased line height for readability */
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.values-list {
+  display: flex;
+  /* Flexbox for layout */
+  flex-wrap: wrap;
+  /* Allow wrapping */
+  margin-top: 20px;
+  /* Margin above the list */
+  justify-content: space-between;
+  /* Space between items */
+}
+
+.value-item {
+  flex: 1 1 calc(45% - 20px);
+  /* Flex items with fixed width */
+  display: flex;
+  /* Flexbox for items */
+  align-items: center;
+  /* Center items vertically */
+  margin: 10px;
+  /* Margin around each item */
+  padding: 15px;
+  /* Padding inside each item */
+  background-color: #fff;
+  /* White background for each value */
+  border: 2px solid hsl(222, 55%, 57%);
+  /* Border color */
+  border-radius: 8px;
+  /* Rounded corners */
+  transition: all 0.3s ease;
+  /* Transition for hover effect */
+}
+
+.value-icon {
+  font-size: 30px;
+  /* Icon size */
+  margin-right: 15px;
+  /* Margin to the right of the icon */
+  color: hsl(222, 55%, 57%);
+  /* Icon color */
+  transition: color 0.3s ease;
+  /* Transition for icon color */
+}
+
+.value-item p {
+  margin: 0;
+  /* Remove default margin */
+  font-size: 16px;
+  /* Font size for list items */
+  text-align: left;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .value-item {
+    flex: 1 1 100%;
+    /* Full width for smaller screens */
+    margin: 10px 0;
+  }
+  .mission-content p {
+    width: 100%;
+    /* Adjust paragraph width on small screens */
+  }
+}
+
+
+
 /* Back to top button */
 .back-to-top {
   position: fixed;
