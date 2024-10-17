@@ -57,6 +57,10 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12 col-sm-12">
+            <!--!----------------------------------------------------------------------------------------------------------------- -->
+            <!--!                                                 NAVIGATION BAR                                                   -->
+            <!--!----------------------------------------------------------------------------------------------------------------- -->
+
             <nav class="navbar navbar-default">
               <!-- Brand and toggle get grouped for better mobile display -->
               <div class="navbar-header">
@@ -69,29 +73,36 @@
                 </button>
                 <!-- Brand -->
                 <a class="navbar-brand page-scroll logo" href="index.html">
-                  <img src="./img/amk.jpg" width="250vw" height="250vh">
+                       <!-- <img src="./img/amk.jpg" width="250vw" height="250vh"> -->
+                       <img src="./img/amk_logo.png" width="250vw" height="250vh">
+                       <!-- <img src="./img/amk2.jpg" width="250vw" height="250vh"> -->
+<!--                   <h1>AMK <span>AND </span> COMPANY</h1> -->
+                  <!-- Uncomment below if you prefer to use an image logo -->
+                  <!-- <img src="./img/logo_tcc_h.png" alt="" title=""> -->
                 </a>
               </div>
 
               <!-- Collect the nav links, forms, and other content for toggling -->
               <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
                 <ul class="nav navbar-nav navbar-right">
-                  <li class="active">
+                  <li>
                     <a class="page-scroll" href="./index.html">Home</a>
                   </li>
                   <li>
                     <a class="page-scroll" href="./about.html">About Us</a>
                   </li>
                   <li class="dropdown">
-                    <a class="page-scroll" href="./services.html" class="dropdown-toggle" data-toggle="dropdown" id="services-main-link">Services<span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                      <li><a href="services.html#client">Client</a></li>
-                      <li><a href="services.html#audit">Audit</a></li>
-                      <li><a href="services.html#consulting">Consulting</a></li>
-                      <li><a href="services.html#tax">Tax</a></li>
-                      <li><a href="services.html#cl">Corporate Law</a></li>
-                      <li><a href="services.html#os">Other Services</a></li>
-                    </ul>
+                    <a class="page-scroll" href="./services.html" class="dropdown-toggle" data-toggle="dropdown">Services<span
+                      class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="services.html#client">Client</a></li>
+                    <li><a href="services.html#audit">Audit</a></li>
+                    <li><a href="services.html#consulting">Consulting</a></li>
+                    <li><a href="services.html#tax">Tax</a></li>
+                    <li><a href="services.html#cl">Corporate Law</a></li>
+                    <li><a href="services.html#os">Other Services</a></li>
+                  </ul>
+                </li>
                   </li>
                   <li>
                     <a class="page-scroll" href="./contact.html">Contact Us</a>
@@ -103,8 +114,7 @@
         </div>
       </div>
     </div>
-</header>
-
+  </header>
 
   <!--!----------------------------------------------------------------------------------------------------------------- -->
   <!--!                                                 HOME-SLIDER                                                      -->
@@ -223,7 +233,14 @@
         <div class="col-md-6 col-sm-6 col-xs-12">
           <div class="well-left">
             <div class="single-well">
-              <img src="img/about/2.jpg" alt="" />
+              <!-- <img src="img/about/2.jpg" alt="" /> -->
+              <img src="img/about/2.jpg" height="500px" id="frontimage">
+        <br>
+        <!-- <button onclick="changeImage('3r.png')" class="color-button" style="background-color: red;"></button>
+            
+        <button onclick="changeImage('4r.png')" class="color-button" style="background-color: blue;"></button>
+            
+        <button onclick="changeImage('5r.png')" class="color-button" style="background-color: black;"></button> -->
             </div>
           </div>
         </div>
@@ -243,13 +260,13 @@
                   <!-- Nav tabs -->
                   <ul class="nav nav-tabs" role="tablist">
                     <li class="active">
-                      <a href="#p-view-1" role="tab" data-toggle="tab">Our Mission</a>
+                      <a onclick="changeImage('img/about/mission.jpg')" href="#p-view-1" role="tab" data-toggle="tab">Our Mission</a>
                     </li>
                     <li>
-                      <a href="#p-view-2" role="tab" data-toggle="tab">Our Vision</a>
+                      <a onclick="changeImage('img/about/vision.jpg')" href="#p-view-2" role="tab" data-toggle="tab">Our Vision</a>
                     </li>
                     <li>
-                      <a href="#p-view-3" role="tab" data-toggle="tab">Expertise</a>
+                      <a onclick="changeImage('img/about/expert.jpg')" href="#p-view-3" role="tab" data-toggle="tab">Expertise</a>
                     </li>
                   </ul>
                 </div>
@@ -1165,6 +1182,13 @@
   <script src="lib/isotope/isotope.pkgd.min.js"></script>
 
   <!-- Contact Form JavaScript File -->
+  <script>
+    function changeImage(filename){
+        let img = document.querySelector("#frontimage");
+        img.setAttribute("src",filename);
+    }
+   </script>
+
   <script src="contactform/contactform.js"></script>
 
   <script src="js/main.js"></script>
