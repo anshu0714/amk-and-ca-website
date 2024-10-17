@@ -1215,6 +1215,9 @@ h3 {
 
 .team-img {
   position: relative;
+}
+
+.team-img img{
  width: 100%;
 }
 
