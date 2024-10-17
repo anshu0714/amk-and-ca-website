@@ -753,7 +753,10 @@ padding: 20px;
 }
 
 .about-image img {
-width: 100%; 
+  display: inline-block;
+  text-align: center;
+  /* justify-items: center; */
+width: 40%; 
 border-radius: 10px; 
 }
 
