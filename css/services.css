@@ -109,7 +109,7 @@ body {
 }
 
 #mc1{
-  background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+  background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);  
   /* background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%); */
 }
 
@@ -212,6 +212,12 @@ body {
   /* Rounded corners */
   transition: all 0.3s ease;
   /* Transition for hover effect */
+}
+
+.value-item:hover{
+  margin: 20px;
+  padding: 20px;
+  transition: 1s;
 }
 
 .value-icon {
