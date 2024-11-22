@@ -732,212 +732,474 @@ color: #3EC1D5;
 }
 
 /* New Styles for About Us Content Layout */
-.container {
-max-width: 1200px;
-margin: 0 auto;
-padding: 0px;
-}
 
-.about-row {
-display: flex;
-flex-wrap: wrap;
-align-items: center;
-}
 
-.about-content {
-flex: 0 0 58%;
-padding: 20px;
-}
-
-ul{
-  list-style-type: disclosure-closed;
-}
-
-.about-image {
-flex: 0 0 42%; 
-padding: 20px;
-}
-
-.about-image img {
-  display: inline-block;
+/* header Section Styling */
+.section-header {
   text-align: center;
-  /* justify-items: center; */
-width: 40%; 
-border-radius: 10px; 
-}
-
-.text-primary {
-color: var(--primary-color);
-}
-
-.service-item {
-display: flex;
-margin-bottom: 20px;
-}
-
-.contact-info {
-display: flex;
-align-items: center;
-margin-top: 20px; 
-}
-
-.contact-info a {
-color: var(--primary-color); 
-text-decoration: none; 
-font-size: 18px; 
-}
-
-.contact-info a:hover {
-text-decoration: underline; 
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-.about-hero {
-    margin-top: 60px;
-    height: 30vh;
-}
-
-.about-heading {
-    font-size: 2rem;
-}
-
-.about-row {
-    flex-direction: column; 
-}
-
-.about-content, .about-image {
-    flex: 0 0 100%;
-}
-}
-
-@media (max-width: 480px) {
-.about-hero {
-    height: 25vh; 
-}
-
-.about-heading {
-    font-size: 1.5rem; 
-}
-}
-
-
-/*--------------------------------
-14. CONTACTOS
-/*--------------------------------*/
-
-/* Main Contact Area */
-.contact-area {
-  width: 100%;
-  background-color: #f3f4f6; /* Light gray background */
-  padding: 80px 0; /* Padding for the entire area */
-}
-
-/* Inner Content Styling */
-.contact-inner {
-  max-width: 1200px; /* Limit the max width of the container */
-  margin: 0 auto; /* Center the container */
-}
-
-/* Section Headline */
-.section-headline h2 {
-  font-size: 36px; /* Heading size */
-  color: #333; /* Dark text color */
-  margin-bottom: 40px; /* Space below heading */
-  text-align: center; /* Center text */
-}
-
-/* Contact Icon Section */
-.contact-icon {
-  text-align: center; /* Center the icons */
-  margin-bottom: 30px; /* Space below each icon */
-}
-
-.contact-icon .single-icon {
-  display: flex; /* Flexbox for alignment */
-  flex-direction: column; /* Stack icon above text */
-  align-items: center; /* Center align items */
-}
-
-/* Icon Style */
-.single-icon i {
-  font-size: 36px; /* Larger icon size */
-  width: 50px;
-  height: 50px;
-  line-height: 46px;
-  border-radius: 50%; /* Circular icons */
-  margin-bottom: 10px; /* Space below icon */
-}
-
-/* Icon Text */
-.single-icon p {
-  font-size: 16px; /* Standard text size */
-  line-height: 30px; /* Line height for text */
-  color: #444; /* Dark text color */
-}
-
-/* Contact Content Box */
-.contact-content {
-  padding: 40px; /* Padding inside content box */
+  padding: 10px 20px;
   background-color: #ffffff; /* White background */
-  border-radius: 12px; /* Rounded corners */
-  margin-top: 20px; /* Space above content box */
-  text-align: center; /* Center text in content box */
-  height: 300px;
+  color: #333; /* Dark gray text for readability */
 }
 
-/* Contact Heading */
-.contact-content h4 {
-  font-size: 28px; /* Size for the contact heading */
-  color: #333; /* Dark text color */
-  margin-bottom: 20px; /* Space below heading */
-  font-weight: 700; /* Bold text */
+/* Heading Styles */
+.section-header h2 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #004b8d; /* Blue color for the main heading */
+  margin-bottom: 15px;
 }
 
-/* Contact Paragraph */
-.contact-content p {
-  font-size: 18px; /* Size for paragraph text */
-  color: #666; /* Lighter text color */
-  line-height: 1.6; /* Line height for better readability */
-  margin-bottom: 30px; /* Space below paragraph */
+.section-header h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background-color: #004b8d;
+  margin: 10px auto 0;
 }
 
-/* Mail Button Styling */
-.mail-btn {
-  background-color: var(--primary-color); /* Primary color background */
-  color: #ffffff; /* White text color */
-  font-size: 18px; /* Font size */
-  padding: 12px 30px; /* Padding for button */
-  border-radius: 30px; /* Rounded corners */
-  text-decoration: none; /* No underline */
-  display: inline-block; /* Inline-block for spacing */
-  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transition effects */
+.section-header h4 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #007bb5; /* Lighter blue color for the subheading */
+  margin-bottom: 20px;
 }
 
-/* Mail Button Hover Effect */
-.mail-btn:hover {
-  background-color: white;
-  color: var(--primary-color);
-  border: 2px solid var(--primary-color);
+.section-header p {
+  font-size: 18px;
+  font-weight: 300;
+  color: #555; /* Slightly lighter text for the paragraph */
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.5;
 }
 
-/* Map/Image Section */
-.contact-image img {
-  width: 100%; /* Responsive image */
-  border-radius: 12px; /* Rounded corners for image */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Shadow effect */
-  height: 300px; /* Maintain aspect ratio */
+/* Audit and Assurance */
+
+.service-content h1{
+padding-top: 30px;
+}
+
+.service-content p{
+  text-align: center;
+  padding-bottom: 30px;
+  font-size: 1.8rem;
+}
+
+/* List of services */
+.features-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Set exactly 3 columns */
+  gap: 20px; /* Add some space between items */
   margin-top: 20px;
+}
+
+/* Each individual service item */
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
+  position: relative;
+  text-align: center;
+  height: auto; /* Allow height to adjust based on content */
+  min-height: 150px; /* Ensure the icon fits properly without overflow */
+  overflow: hidden;
+  padding-bottom: 0; /* Remove any extra padding at the bottom */
+  margin-bottom: 0; /* Remove any margin at the bottom */
+}
+
+/* Service icon styling */
+.feature-icon {
+  font-size: 4rem;
+  color: #007bff;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  padding: 20px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1; /* Keeps icon above the text */
+}
+
+/* Show text on hover */
+.feature-item:hover p {
+  opacity: 1;
+  transform: translateY(0); /* Slide up the text smoothly */
+}
+
+/* Hover effect for service items */
+.feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  height: 220px; /* Expand height on hover */
+}
+
+/* Service text styling */
+.feature-item p {
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: #333;
+  margin: 0;
+  opacity: 0; /* Initially hide the text */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(10px); /* Start slightly lower for smooth reveal */
+  padding-top: 10px; /* Add some padding for spacing after the icon */
+}
+
+/* Ensure the icon is always centered */
+.feature-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* Adjust the hover effect to show the text smoothly */
+.feature-item:hover p {
+  opacity: 1;
+  transform: translateY(0); /* Smoothly reveal the text on hover */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .features-list {
+      grid-template-columns: 1fr 1fr; /* 2 columns on smaller screens */
+  }
+
+  .feature-item {
+      padding: 15px;
+  }
+
+  .service-content h1 {
+      font-size: 2rem;
+  }
+}
+
+
+
+
+/* Tax Consulting and Compliance Service Section */
+
+.tax-consulting-section {
+  padding: 50px 20px;
+}
+
+.tax-consulting-section h1 {
+  font-size: 4.5rem;
+  color: #333;
+  margin-top: 40px;
+}
+
+.tax-consulting-section p {
+  font-size: 1.8rem;
+  padding: 30px;
+  text-align: center;
+  padding-top: 0px;
+}
+
+.tax-services-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 4 columns per row */
+  gap: 20px;
+}
+
+.tax-service-item {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  height: 200px;
+}
+
+.tax-service-item .service-icon {
+  font-size: 50px;
+  color: #007bff;
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+.tax-service-item p {
+  font-size: 1.8rem; /* Updated font size */
+  color: #333;
+  margin-left: 60px; /* Space for icon */
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.tax-service-item:hover {
+  background-color: #5ea1ee; /* Blue background for whole container */
+}
+
+.tax-service-item:hover .service-icon {
+  opacity: 0; /* Hide icon on hover */
+}
+
+.tax-service-item:hover p {
+  opacity: 1; /* Show text on hover */
+  color: white; 
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .contact-content {
-    margin-top: 20px; /* Space on smaller screens */
+  .tax-services-list {
+    grid-template-columns: 1fr 1fr; /* 2 columns on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .tax-services-list {
+    grid-template-columns: 1fr; /* 1 column on very small screens */
+  }
+}
+
+
+/* Consulting and Outsourcing Section */
+.service-content1 h1{
+  padding-top: 30px;
+}
+
+.service-content1 p{
+  text-align: center;
+  padding: 30px;
+  font-size: 20px;
+  padding-top: 0px;
+}
+
+/* Corporate law and allied services Section */
+
+.corporate-law-section p {
+  font-size: 1.8rem;
+  color: #666;
+  line-height: 1.6;
+  text-align: center;
+  padding: 30px;
+}
+
+.corporate-law-section {
+  padding: 50px 20px;
+}
+
+.corporate-law-section h1 {
+  font-size: 4.5rem;
+  margin-top: 30px;
+}
+
+.corporate-law-section p {
+  font-size: 1.8rem;
+  padding: 30px;
+  text-align: center;
+  padding-top: 0px;
+}
+
+.corporate-services-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 4 columns per row */
+  gap: 20px;
+}
+
+.corporate-service-item {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  height: 200px;
+}
+
+.corporate-service-item .service-icon1 {
+  font-size: 50px;
+  color: #007bff;
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+.corporate-service-item p {
+  font-size: 1.8rem;
+  color: #333;
+  margin-left: 60px; /* Space for icon */
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.corporate-service-item:hover {
+  background-color: #5ea1ee; /* Blue background on hover */
+}
+
+.corporate-service-item:hover .service-icon1 {
+  opacity: 0; /* Hide icon on hover */
+}
+
+.corporate-service-item:hover p {
+  opacity: 1; /* Show text on hover */
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .corporate-services-list {
+    grid-template-columns: 1fr 1fr; /* 2 columns per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .corporate-services-list {
+    grid-template-columns: 1fr; /* 1 column per row on very small screens */
+  }
+}
+
+
+/* Other Services section */
+
+.audit-financial-section h1 {
+  font-size: 4.5rem;
+  color: #333;
+  padding-top: 30px;
+}
+
+.audit-financial-section p {
+  font-size: 1.8rem;
+  padding: 30px;
+  text-align: center;
+  padding-top: 0px;
+}
+
+
+/* List of audit financial services */
+.audit-services-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Set exactly 3 columns */
+  gap: 20px; /* Add some space between items */
+  margin-top: 20px;
+}
+
+/* Each individual service item */
+.audit-service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
+  position: relative;
+  text-align: center;
+  height: auto; /* Allow height to adjust based on content */
+  min-height: 150px; /* Ensure the icon fits properly without overflow */
+  overflow: hidden;
+  padding-bottom: 0; /* Remove any extra padding at the bottom */
+  margin-bottom: 0; /* Remove any margin at the bottom */
+}
+
+/* Service icon styling */
+.service-icon {
+  font-size: 4rem;
+  color: #007bff;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  padding: 20px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Ensures it stays within the container's bounds */
+  z-index: 1; /* Keeps icon above the text */
+}
+
+/* Show text on hover */
+.audit-service-item:hover p {
+  opacity: 1;
+  transform: translateY(0); /* Slide up the text smoothly */
+}
+
+/* Hover effect for audit service items */
+.audit-service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  height: 220px; /* Expand height on hover */
+}
+
+/* Service text styling */
+.audit-service-item p {
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: #333;
+  margin: 0;
+  opacity: 0; /* Initially hide the text */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(10px); /* Start slightly lower for smooth reveal */
+  padding-top: 10px; /* Add some padding for spacing after the icon */
+}
+
+/* Ensure the icon is always centered */
+.service-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* Adjust the hover effect to show the text smoothly */
+.audit-service-item:hover p {
+  opacity: 1;
+  transform: translateY(0); /* Smoothly reveal the text on hover */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .audit-services-list {
+    grid-template-columns: 1fr 1fr; /* 2 columns on smaller screens */
   }
 
-  .contact-image img {
-    margin-bottom: 30px; /* Space below image on mobile */
+  .audit-service-item {
+    padding: 15px;
+  }
+
+  .audit-financial-section h1 {
+    font-size: 2rem;
   }
 }
 
