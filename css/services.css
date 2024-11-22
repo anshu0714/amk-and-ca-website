@@ -808,7 +808,7 @@ padding-top: 30px;
   transition: transform 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
   position: relative;
   text-align: center;
-  height: auto; /* Allow height to adjust based on content */
+  height: 200px; /* Allow height to adjust based on content */
   min-height: 150px; /* Ensure the icon fits properly without overflow */
   overflow: hidden;
   padding-bottom: 0; /* Remove any extra padding at the bottom */
@@ -841,7 +841,7 @@ padding-top: 30px;
 .feature-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  height: 220px; /* Expand height on hover */
+  height: 200px; /* Expand height on hover */
 }
 
 /* Service text styling */
@@ -888,100 +888,106 @@ padding-top: 30px;
 
 
 
+
 /* Tax Consulting and Compliance Service Section */
 
-.tax-consulting-section {
-  padding: 50px 20px;
-}
-
+/* Section heading */
 .tax-consulting-section h1 {
-  font-size: 4.5rem;
-  color: #333;
-  margin-top: 40px;
-}
-
-.tax-consulting-section p {
-  font-size: 1.8rem;
-  padding: 30px;
+  padding-top: 30px;
   text-align: center;
-  padding-top: 0px;
 }
 
+/* Section description */
+.tax-consulting-section p {
+  text-align: center;
+  padding-bottom: 30px;
+  font-size: 1.8rem;
+}
+
+/* List of tax services */
 .tax-services-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 4 columns per row */
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr); /* Set exactly 3 columns */
+  gap: 20px; /* Space between items */
+  margin-top: 20px;
 }
 
+/* Individual service items */
 .tax-service-item {
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
+  text-align: center;
+  height: auto;
+  min-height: 150px;
   overflow: hidden;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  height: 200px;
+  margin-bottom: 0;
+}
+
+/* Service icon styling */
+.tax-consulting-section h1{
+  padding-top: 100px;
 }
 
 .tax-service-item .service-icon {
-  font-size: 50px;
+  font-size: 4rem;
   color: #007bff;
-  transition: all 0.3s ease;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 1;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  padding: 20px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.tax-service-item p {
-  font-size: 1.8rem; /* Updated font size */
-  color: #333;
-  margin-left: 60px; /* Space for icon */
-  opacity: 0;
-  transform: translateX(-20px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
+/* Hover effect for service items */
 .tax-service-item:hover {
-  background-color: #5ea1ee; /* Blue background for whole container */
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.tax-service-item:hover .service-icon {
-  opacity: 0; /* Hide icon on hover */
-}
-
-.tax-service-item:hover p {
-  opacity: 1; /* Show text on hover */
-  color: white; 
+/* Service text styling */
+.tax-service-item p {
   font-weight: bold;
-  padding: 10px;
-  border-radius: 4px;
-  text-align: center;
+  font-size: 1.8rem;
+  color: #333;
+  margin: 0;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(10px); /* Slide up effect */
+  padding-top: 10px;
 }
 
-/* Responsive Design */
+/* Reveal text on hover */
+.tax-service-item:hover p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive design for smaller screens */
 @media (max-width: 768px) {
   .tax-services-list {
     grid-template-columns: 1fr 1fr; /* 2 columns on smaller screens */
   }
-}
 
-@media (max-width: 480px) {
-  .tax-services-list {
-    grid-template-columns: 1fr; /* 1 column on very small screens */
+  .tax-consulting-section h1 {
+    font-size: 2rem;
   }
 }
 
 
+
 /* Consulting and Outsourcing Section */
 .service-content1 h1{
-  padding-top: 30px;
+  padding-top: 100px;
 }
 
 .service-content1 p{
@@ -993,98 +999,78 @@ padding-top: 30px;
 
 /* Corporate law and allied services Section */
 
-.corporate-law-section p {
-  font-size: 1.8rem;
-  color: #666;
-  line-height: 1.6;
-  text-align: center;
-  padding: 30px;
-}
-
-.corporate-law-section {
-  padding: 50px 20px;
-}
-
+/* Styling for Corporate Law Section */
 .corporate-law-section h1 {
-  font-size: 4.5rem;
-  margin-top: 30px;
+  padding-top: 100px;
+  text-align: center;
 }
 
 .corporate-law-section p {
-  font-size: 1.8rem;
-  padding: 30px;
   text-align: center;
-  padding-top: 0px;
+  padding-bottom: 30px;
+  font-size: 1.8rem;
 }
 
+/* List of corporate services */
 .corporate-services-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 4 columns per row */
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px; /* Space between items */
+  margin-top: 20px;
 }
 
+/* Individual corporate service item */
 .corporate-service-item {
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
+  text-align: center;
+  height: auto;
+  min-height: 150px;
+}
+
+/* Corporate service icon styling */
+.service-icon1 {
+  font-size: 4rem;
+  color: #007bff;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  padding: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover effect for service items */
+.corporate-service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   height: 200px;
 }
 
-.corporate-service-item .service-icon1 {
-  font-size: 50px;
-  color: #007bff;
-  transition: all 0.3s ease;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 1;
-}
-
 .corporate-service-item p {
+  font-weight: bold;
   font-size: 1.8rem;
   color: #333;
-  margin-left: 60px; /* Space for icon */
-  opacity: 0;
-  transform: translateX(-20px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  margin: 0;
 }
 
-.corporate-service-item:hover {
-  background-color: #5ea1ee; /* Blue background on hover */
-}
-
-.corporate-service-item:hover .service-icon1 {
-  opacity: 0; /* Hide icon on hover */
-}
-
-.corporate-service-item:hover p {
-  opacity: 1; /* Show text on hover */
-  color: white;
-  font-weight: bold;
-  padding: 10px;
-  border-radius: 4px;
-  text-align: center;
-}
-
-/* Responsive Design */
+/* Responsive design for smaller screens */
 @media (max-width: 768px) {
   .corporate-services-list {
-    grid-template-columns: 1fr 1fr; /* 2 columns per row on smaller screens */
+    grid-template-columns: 1fr 1fr; /* 2 columns on smaller screens */
   }
-}
 
-@media (max-width: 480px) {
-  .corporate-services-list {
-    grid-template-columns: 1fr; /* 1 column per row on very small screens */
+  .corporate-law-section h1 {
+    font-size: 2rem;
   }
 }
 
@@ -1094,7 +1080,7 @@ padding-top: 30px;
 .audit-financial-section h1 {
   font-size: 4.5rem;
   color: #333;
-  padding-top: 30px;
+  padding-top: 100px;
 }
 
 .audit-financial-section p {
@@ -1126,7 +1112,7 @@ padding-top: 30px;
   transition: transform 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
   position: relative;
   text-align: center;
-  height: auto; /* Allow height to adjust based on content */
+  height: 200px; /* Allow height to adjust based on content */
   min-height: 150px; /* Ensure the icon fits properly without overflow */
   overflow: hidden;
   padding-bottom: 0; /* Remove any extra padding at the bottom */
@@ -1159,7 +1145,7 @@ padding-top: 30px;
 .audit-service-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  height: 220px; /* Expand height on hover */
+  height: 200px; /* Expand height on hover */
 }
 
 /* Service text styling */
