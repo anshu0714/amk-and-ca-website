@@ -1203,6 +1203,12 @@ input, select, textarea, input[type="text"], input[type="date"], input[type="url
   border-bottom: none;
 }
 
+.experience-item img{
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
 @media (max-width: 768px) {
   .experience-item {
       margin-bottom: 20px;
@@ -1587,7 +1593,48 @@ input, select, textarea, input[type="text"], input[type="date"], input[type="url
 }
 
 /*----------------------------------------
-15. FOOTER
+15. CAROUSEL
+----------------------------------------*/
+
+/* styles.css */
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 10px;
+  padding-top: 0px;
+  margin-top: 0px;
+  padding-bottom: 100px;
+  background-color: #f9f9f9;
+}
+
+.carousel-images {
+  display: flex;
+  gap: 25px; /* Adjust gap between images */
+  animation: scroll 60s linear infinite; /* Smooth, continuous scroll */
+}
+
+.carousel-images img {
+  width: 150px;
+  height: 100px;
+  border-radius: 10px;
+  flex-shrink: 0; /* Prevent shrinking of images */
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0); /* Start at the beginning */
+  }
+  to {
+    transform: translateX(-100%); /* Scroll the entire set of images */
+  }
+}
+
+
+
+
+/*----------------------------------------
+16. FOOTER
 ----------------------------------------*/
 
 .footer-area {

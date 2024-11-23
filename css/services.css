@@ -831,12 +831,6 @@ padding-top: 30px;
   z-index: 1; /* Keeps icon above the text */
 }
 
-/* Show text on hover */
-.feature-item:hover p {
-  opacity: 1;
-  transform: translateY(0); /* Slide up the text smoothly */
-}
-
 /* Hover effect for service items */
 .feature-item:hover {
   transform: translateY(-5px);
@@ -850,7 +844,6 @@ padding-top: 30px;
   font-size: 1.8rem;
   color: #333;
   margin: 0;
-  opacity: 0; /* Initially hide the text */
   transition: opacity 0.3s ease, transform 0.3s ease;
   transform: translateY(10px); /* Start slightly lower for smooth reveal */
   padding-top: 10px; /* Add some padding for spacing after the icon */
@@ -960,16 +953,9 @@ padding-top: 30px;
   font-size: 1.8rem;
   color: #333;
   margin: 0;
-  opacity: 0; /* Initially hidden */
   transition: opacity 0.3s ease, transform 0.3s ease;
   transform: translateY(10px); /* Slide up effect */
   padding-top: 10px;
-}
-
-/* Reveal text on hover */
-.tax-service-item:hover p {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* Responsive design for smaller screens */
@@ -1135,11 +1121,6 @@ padding-top: 30px;
   z-index: 1; /* Keeps icon above the text */
 }
 
-/* Show text on hover */
-.audit-service-item:hover p {
-  opacity: 1;
-  transform: translateY(0); /* Slide up the text smoothly */
-}
 
 /* Hover effect for audit service items */
 .audit-service-item:hover {
@@ -1154,7 +1135,6 @@ padding-top: 30px;
   font-size: 1.8rem;
   color: #333;
   margin: 0;
-  opacity: 0; /* Initially hide the text */
   transition: opacity 0.3s ease, transform 0.3s ease;
   transform: translateY(10px); /* Start slightly lower for smooth reveal */
   padding-top: 10px; /* Add some padding for spacing after the icon */

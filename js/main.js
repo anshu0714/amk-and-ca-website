@@ -173,3 +173,26 @@
   });
 
 })(jQuery);
+
+
+const carouselImages = document.querySelector('.carousel-images');
+
+// Duplicate images to ensure a seamless loop
+const imagesCount = carouselImages.children.length;
+for (let i = 0; i < imagesCount; i++) {
+  const clonedImage = carouselImages.children[i].cloneNode(true);
+  carouselImages.appendChild(clonedImage); // Append the cloned images
+}
+
+// Get the total width of the carousel items after duplication
+const totalWidth = carouselImages.scrollWidth;
+
+// Speed factor: Adjust this to control the scroll speed (higher is faster)
+const speedFactor = 500; // Pixels per second (adjust as needed)
+
+// Calculate the animation duration dynamically based on total width
+const animationDuration = totalWidth / speedFactor; // In seconds
+
+// Set the calculated animation duration to make sure the scroll is smooth
+carouselImages.style.animationDuration = `${animationDuration}s`;
+
