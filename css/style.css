@@ -662,11 +662,9 @@ input, select, textarea, input[type="text"], input[type="date"], input[type="url
 .custom-tab-container {
   display: flex;
   flex-direction: column; /* Stack the navbar and content vertically */
-}
-
-.custom-tab-menu .custom-nav-tabs > li > a:hover {
-  border-color: #ddd; 
-  color: var(--primary-color); 
+  margin: 0 auto;
+  padding: 10px;
+  max-width: 90%; /* Ensures content does not exceed the screen width */
 }
 
 .custom-tab-menu {
@@ -678,11 +676,9 @@ input, select, textarea, input[type="text"], input[type="date"], input[type="url
 .custom-tab-menu ul.custom-nav {
   margin: 0;
   padding: 0;
-  /* list-style: none; */
 }
 
 .custom-tab-menu ul.custom-nav li {
-  border: none;
   display: inline-block;
   margin-bottom: 10px;
 }
@@ -691,25 +687,14 @@ input, select, textarea, input[type="text"], input[type="date"], input[type="url
   background: transparent;
   border-radius: 5px; 
   color: #444;
-  display: block;
+  display: inline-block; /* Adjusted for better wrapping */
   font-weight: 500;
   margin-right: 5px;
   padding: 10px 20px;
   font-family: 'Raleway', sans-serif;
-  font-size: 18px;
+  font-size: 16px; /* Reduced font size for smaller screens */
   transition: all 0.3s ease; 
   text-decoration: none;
-}
-
-.custom-tab-menu ul.custom-nav li a:hover {
-  background-color: var(--primary-color); 
-  color: white; 
-}
-
-.custom-tab-menu ul li.custom-active a {
-  border: 0.5px solid var(--primary-color);
-  border-bottom: 3px solid var(--primary-color); 
-  color: var(--primary-color);
 }
 
 .custom-tab-content {
@@ -717,10 +702,11 @@ input, select, textarea, input[type="text"], input[type="date"], input[type="url
   padding: 15px;
   border-radius: 8px; 
   background-color: #fff;
+  margin-top: 10px;
 }
 
 .custom-tab-content h4 {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
   color: var(--primary-color);
   margin-bottom: 15px;
@@ -728,30 +714,53 @@ input, select, textarea, input[type="text"], input[type="date"], input[type="url
 }
 
 .custom-tab-content p {
-  font-size: 16px;
+  font-size: 14px; /* Adjusted for readability on smaller screens */
   line-height: 1.6;
   color: #666;
   margin-bottom: 10px;
 }
 
-.custom-tab-main-img a {
-  position: relative;
-  display: block;
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .custom-tab-menu ul.custom-nav li {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .custom-tab-menu ul.custom-nav li a {
+    font-size: 14px; /* Adjusted for smaller screens */
+    padding: 8px 15px; /* Reduced padding */
+  }
+
+  .custom-tab-content {
+    padding: 10px; /* Reduced padding */
+  }
+
+  .custom-tab-content h4 {
+    font-size: 18px; /* Adjusted font size */
+  }
+
+  .custom-tab-content p {
+    font-size: 14px; /* Adjusted for readability */
+  }
 }
 
-.custom-tab-main-img a:hover span.custom-events-offer {
-  height: 20%;
-  transition: height 0.3s ease; 
+@media (max-width: 480px) {
+  .custom-tab-menu ul.custom-nav li a {
+    padding: 5px 10px; /* Further reduced padding */
+    font-size: 12px; /* Smaller font size for very small screens */
+  }
+
+  .custom-tab-content h4 {
+    font-size: 16px; /* Adjust font size for very small screens */
+  }
+
+  .custom-tab-content p {
+    font-size: 12px; /* Adjust for readability */
+  }
 }
 
-.custom-tab-pane {
-  display: none; /* Hide all tab content by default */
-}
-
-.custom-tab-pane.custom-active {
-  display: block; /* Show the active tab content */
-  max-width: 50%;
-}
 
 /*----------------------------------------
  7. SUBSCRIÇÃO
