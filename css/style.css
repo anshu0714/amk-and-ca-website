@@ -459,7 +459,7 @@ input, select, textarea, input[type="text"], input[type="date"], input[type="url
   text-align: center;
   margin-bottom: 30px;
 }
-
+ 
 .service-highlight h2 {
   font-size: 3.5rem;
   color: #333;
@@ -488,6 +488,10 @@ input, select, textarea, input[type="text"], input[type="date"], input[type="url
   transition: none; /* Remove animations */
   padding: 0px;
   margin: 0px;
+}
+
+.content{
+  background-size: 110%;
 }
 
 .content:hover{
